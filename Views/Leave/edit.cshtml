@@ -1,0 +1,52 @@
+﻿@model Leave_Mgt.Models.Leavez.Leave  
+@{  
+    ViewBag.Title = "Edit";  
+}  
+   
+<div class="card" style="width:60%; margin:auto;">  
+    <div class="card-header bg-dark text-white">  
+        <h3>Edit Employee</h3>  
+    </div>  
+    <div class="card-body">  
+        @using (Html.BeginForm())  
+        {  
+            @Html.AntiForgeryToken()  
+            @Html.HiddenFor(m => m.id)  
+            <div class="row">  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.employee_id)  
+                        @Html.EditorFor(m => m.employee_id, new { htmlAttributes = new { @class = "form-control" } })  
+                        @Html.ValidationMessageFor(m => m.employee_id)  
+                    </div>  
+                </div>  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.start_date)  
+                        @Html.EditorFor(m => m.start_date, new { htmlAttributes = new { @class = "form-control" } })  
+                        @Html.ValidationMessageFor(m => m.start_date)  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="row">  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.end_date)  
+                        @Html.EditorFor(m => m.end_date, new { htmlAttributes = new { @class = "form-control" } })  
+                        @Html.ValidationMessageFor(m => m.end_date)  
+                    </div>  
+                </div>  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.reason)  
+                        @Html.EditorFor(m => m.reason, new { htmlAttributes = new { @class = "form-control" } })  
+                        @Html.ValidationMessageFor(m => m.reason)  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="form-group">  
+                <button type="submit" class="btn btn-primary">Update</button>  
+            </div>  
+        }  
+    </div>  
+</div>  

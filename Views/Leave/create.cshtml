@@ -1,0 +1,52 @@
+﻿@model Leave_Mgt.Models.Leavez.Leave  
+@{  
+    ViewBag.Title = "Create";  
+}  
+   
+<div class="card" style="width:60%; margin:auto;">  
+    <div class="card-header bg-dark text-white">  
+        <h5>Create New</h5>  
+    </div>  
+    <div class="card-body">  
+        @using (Html.BeginForm())  
+        {  
+            @Html.AntiForgeryToken()  
+   
+            <div class="row">  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.employee_id)  
+                        @Html.TextBoxFor(m => m.employee_id, new { @class = "form-control" })  
+                        @Html.ValidationMessageFor(m => m.employee_id)  
+                    </div>  
+                </div>  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+    @Html.LabelFor(m => m.start_date)  
+    @Html.TextBoxFor(m => m.start_date, new { @class = "form-control" })  
+    @Html.ValidationMessageFor(m => m.start_date)  
+</div>  
+                </div>  
+            </div>  
+            <div class="row">  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.end_date)  
+                        @Html.TextBoxFor(m => m.end_date, new { @class = "form-control" })  
+                        @Html.ValidationMessageFor(m => m.end_date)  
+                    </div>  
+                </div>  
+                <div class="col-md-6">  
+                    <div class="form-group">  
+                        @Html.LabelFor(m => m.reason)  
+                        @Html.TextBoxFor(m => m.reason, new { @class = "form-control" })  
+                        @Html.ValidationMessageFor(m => m.reason)  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="form-group">  
+                <button type="submit" class="btn btn-primary">Submit</button>  
+            </div>  
+        }  
+    </div>  
+</div>  

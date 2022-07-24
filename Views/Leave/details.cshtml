@@ -1,0 +1,44 @@
+﻿@model Leave_Mgt.Models.Leavez.Leave  
+@{  
+    ViewBag.Title = "Details";  
+}  
+   
+<div class="card" style="width:60%; margin:auto;">  
+    <div class="card-header bg-dark text-white">  
+        <h5>Employee Details</h5>  
+    </div>  
+    <div class="card-body">  
+        <table class="table table-borderless">  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.id)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.id)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.employee_id)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.employee_id)</td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.start_date)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.start_date)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.end_date)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.end_date)</td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.reason)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.reason)</td>  
+            </tr>  
+        </table>  
+        <p>  
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id },new {@class="btn btn-info"})  
+            @Html.ActionLink("Back to List", "Index","",new {@class="btn btn-primary"})  
+        </p>  
+    </div>  
+</div>  

@@ -19,16 +19,16 @@ namespace Leave_Mgt.Controllers.Employees
         // GET: DepartmentController
         public ActionResult Index()
         {
-            var departments = from department in employeeRepository.GetEmployees()
-            select department;
-            return View(departments);
+            var employe = from employee in employeeRepository.GetEmployees()
+            select employee;
+            return View(employe);
         }
 
         // GET: DepartmentController/Details/5
         public ActionResult Details(int id)
         {
-            var departments = employeeRepository.GetEmployeeByID(id);
-            return View(departments);
+            var employe = employeeRepository.GetEmployeeByID(id);
+            return View(employe);
         }
 
         // GET: DepartmentController/Create

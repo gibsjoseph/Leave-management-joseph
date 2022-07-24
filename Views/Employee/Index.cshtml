@@ -1,20 +1,21 @@
-﻿@model IEnumerable<Leave_Mgt.Models.Leavez.Leave>  
+﻿@model IEnumerable<Leave_Mgt.Models.Employees.Employee>  
 @{  
     ViewBag.Title = "Index";  
 }  
    
-<h3 class="text-center text-uppercase">List of Leave</h3>  
+<h3 class="text-center text-uppercase">List of Employee</h3>  
 <p>  
-    @Html.ActionLink("Create New", "Create","Leave",new {@class="btn btn-primary" })  
+    @Html.ActionLink("Create New", "Create","Employee",new {@class="btn btn-primary" })  
 </p>  
 <table class="table table-bordered">  
     <thead>  
         <tr>  
             <th>@Html.DisplayNameFor(m => m.id)</th>  
-            <th>@Html.DisplayNameFor(m => m.employee_id)</th>  
-            <th>@Html.DisplayNameFor(m => m.start_date)</th>  
-            <th>@Html.DisplayNameFor(m => m.end_date)</th>  
-            <th>@Html.DisplayNameFor(m => m.reason)</th>  
+            <th>@Html.DisplayNameFor(m => m.firstName)</th>  
+            <th>@Html.DisplayNameFor(m => m.lastName)</th>  
+            <th>@Html.DisplayNameFor(m => m.department_id)</th>  
+            <th>@Html.DisplayNameFor(m => m.date_of_birth)</th>  
+            <th>@Html.DisplayNameFor(m => m.employeeType)</th>  
             <th>Action(s)</th>  
         </tr>  
     </thead>  
@@ -23,10 +24,11 @@
         {  
             <tr>  
                 <td>@emp.id</td>  
-                <td>@emp.employee_id</td>  
-                <td>@emp.start_date</td>  
-                <td>@emp.end_date</td>  
-                <td>@emp.reason</td>  
+                <td>@emp.firstName</td>  
+                <td>@emp.lastName</td>  
+                <td>@emp.department_id</td>  
+                <td>@emp.date_of_birth</td>  
+                <td>@emp.employeeType</td>  
                 <td>  
                    @Html.ActionLink("Details","Details",new {id=emp.id },new {@class="btn btn-info"})  
                    @Html.ActionLink("Edit", "Edit", new { id = emp.id }, new { @class = "btn btn-primary" })  

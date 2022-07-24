@@ -9,15 +9,15 @@ namespace Leave_Mgt.Models.Leavez
 
         [Column("employee_id")]
         [Display(Name = "employee_id")]
-        public string employee_id { get; set; }
+        public int employee_id { get; set; }
 
-        [Column("startDate")]
-        [Display(Name = "startDate")]
-        public string startDate { get; set; }
+        [Column("start_date")]
+        [Display(Name = "start_date")]
+        public DateTime start_date { get; set; }
 
-        [Column("endDate")]
-        [Display(Name = "endDate")]
-        public string endDate { get; set; }
+        [Column("end_date")]
+        [Display(Name = "end_date")]
+        public DateTime end_date { get; set; }
 
         [Column("reason")]
         [Display(Name = "reason")]

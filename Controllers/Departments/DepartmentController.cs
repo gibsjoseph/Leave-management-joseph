@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Leave_Mgt.Controllers.Departments
 {
-    public class EmployeeController : Controller
+    public class DepartmentController : Controller
     {
         private IDepartmentRepository departmentRepository;
 
 
-        public EmployeeController()
+        public DepartmentController()
         {
             this.departmentRepository = new DepartmentRepository(new Context.LeaveMgtContext());
         }

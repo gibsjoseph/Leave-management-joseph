@@ -17,11 +17,11 @@ namespace Leave_Mgt.Models.Employees
 
         [Column("department_id")]
         [Display(Name = "department_id")]
-        public string department_id { get; set; }
+        public int department_id { get; set; }
 
         [Column("date_of_birth")]
         [Display(Name = "date_of_birth")]
-        public string date_of_birth { get; set; }
+        public DateTime date_of_birth { get; set; }
 
         [Column("employeeType")]
         [Display(Name = "employeeType")]

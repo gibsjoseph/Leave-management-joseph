@@ -1,0 +1,48 @@
+﻿@model Leave_Mgt.Models.Employees.Employee  
+@{  
+    ViewBag.Title = "Details";  
+}  
+   
+<div class="card" style="width:60%; margin:auto;">  
+    <div class="card-header bg-dark text-white">  
+        <h5>Employee Details</h5>  
+    </div>  
+    <div class="card-body">  
+        <table class="table table-borderless">  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.id)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.id)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.firstName)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.firstName)</td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.lastName)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.lastName)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.department_id)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.department_id)</td>  
+            </tr>  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.date_of_birth)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.date_of_birth)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.employeeType)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.employeeType)</td>  
+            </tr>  
+        </table>  
+        <p>  
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id },new {@class="btn btn-info"})  
+            @Html.ActionLink("Back to List", "Index","",new {@class="btn btn-primary"})  
+        </p>  
+    </div>  
+</div>  
