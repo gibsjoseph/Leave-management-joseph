@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Leave_Mgt.Models.Departments.Department>  
+@{  
+    ViewBag.Title = "Index";  
+}  
+   
+<h3 class="text-center text-uppercase">List of Departments</h3>  
+<p>  
+    @Html.ActionLink("Create New", "Create","Department")  
+</p>  
+<table class="table table-bordered">  
+    <thead>  
+        <tr>  
+            <th>@Html.DisplayNameFor(m => m.id)</th>  
+            <th>@Html.DisplayNameFor(m => m.department)</th>  
+            <th>Action(s)</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var emp in Model)  
+        {  
+            <tr>  
+                <td>@emp.id</td>  
+                <td>@emp.department</td>  
+                <td>  
+                   @Html.ActionLink("Details","Details",new {id=emp.id },new {@class="btn btn-info"})  
+                   @Html.ActionLink("Edit", "Edit", new { id = emp.id }, new { @class = "btn btn-primary" })  
+                   @Html.ActionLink("Delete", "Delete", new { id = emp.id }, new { @class = "btn btn-danger" })  
+                </td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>  

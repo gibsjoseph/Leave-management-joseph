@@ -1,0 +1,28 @@
+﻿@model Leave_Mgt.Models.Departments.Department  
+@{  
+    ViewBag.Title = "Details";  
+}  
+   
+<div class="card" style="width:60%; margin:auto;">  
+    <div class="card-header bg-dark text-white">  
+        <h5>Department Details</h5>  
+    </div>  
+    <div class="card-body">  
+        <table class="table table-borderless">  
+            <tr>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.id)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.id)</td>  
+                <td>  
+                    <b>@Html.DisplayNameFor(m => m.department)</b>  
+                </td>  
+                <td>@Html.DisplayFor(m => m.department)</td>  
+            </tr>  
+        </table>  
+        <p>  
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id },new {@class="btn btn-info"})  
+            @Html.ActionLink("Back to List", "Index","",new {@class="btn btn-primary"})  
+        </p>  
+    </div>  
+</div>  
