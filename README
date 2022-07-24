@@ -1,0 +1,11 @@
+Leave management 
+coded in C# ASP.NET Core MVC
+SQL Database, included in the project Repo in the folder /db
+Used repository pattern  to create an abstraction layer between the data access layer and the business logic layer.
+To this application, clone https://github.com/gibsjoseph/Leave-management-joseph 
+Import the sql db found this directory /db
+Edit the connection string depending on your sql server instance  /Context/LeaveMgtContex.cs file
+Build the application
+Run the application
+First the index page displays the leave and create others
+You Can navigate the Employee, and Department
