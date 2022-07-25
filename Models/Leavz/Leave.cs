@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Leave_Mgt.Models.Employees;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Leave_Mgt.Models.Leavez
 {
@@ -7,9 +8,10 @@ namespace Leave_Mgt.Models.Leavez
         [Key]
         public int id { get; set; }
 
-        [Column("employee_id")]
-        [Display(Name = "employee_id")]
-        public int employee_id { get; set; }
+        [Column("employeeid")]
+        [Display(Name = "employeeid")]
+        public int employeeid { get; set; }
+        public virtual Employee employee { get; set; }
 
         [Column("start_date")]
         [Display(Name = "start_date")]

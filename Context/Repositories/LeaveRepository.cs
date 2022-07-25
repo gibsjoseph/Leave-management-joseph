@@ -3,6 +3,7 @@ using Leave_Mgt.Context;
 using Leave_Mgt.Models.Leavez;
 using System.Data;
 using Microsoft.EntityFrameworkCore;
+using Leave_Mgt.Models.Employees;
 
 namespace Leave_Mgt.Context.Repositories
 { 
@@ -23,7 +24,15 @@ namespace Leave_Mgt.Context.Repositories
         }
         public void InsertLeave(Leave leave)
         {
-            _context.lLeaves.Add(leave);
+            //checking for multiple leave with date overlap
+            Leave leavecheck = this.GetLeaveByID(leave.employeeid);
+            if (leavecheck.end_date < leave.start_date)
+            {
+                _context.lLeaves.Add(leave);
+
+            }
+                
+               
         }
         public void DeleteLeave(int leaveID)
         {

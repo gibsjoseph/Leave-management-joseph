@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Leave_Mgt.Models.Departments;
+using Leave_Mgt.Models.Leavez;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Leave_Mgt.Models.Employees
 {
@@ -15,9 +17,10 @@ namespace Leave_Mgt.Models.Employees
         [Display(Name = "lastName")]
         public string lastName { get; set; }
 
-        [Column("department_id")]
-        [Display(Name = "department_id")]
-        public int department_id { get; set; }
+        [Column("departmentid")]
+        [Display(Name = "departmentid")]
+        public int departmentid { get; set; }
+        public virtual Department department { get; set; }
 
         [Column("date_of_birth")]
         [Display(Name = "date_of_birth")]
@@ -26,6 +29,8 @@ namespace Leave_Mgt.Models.Employees
         [Column("employeeType")]
         [Display(Name = "employeeType")]
         public string employeeType { get; set; }
+
+        public virtual ICollection<Leave> Leaves { get; set; }
         
     }
 }

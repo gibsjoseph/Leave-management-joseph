@@ -44,6 +44,7 @@ namespace Leave_Mgt.Controllers.leaves
         {
             try
             {
+                ModelState.Remove("employee");
                 if (ModelState.IsValid)
                 {
                     leaveRepository.InsertLeave(leave);
@@ -72,6 +73,7 @@ namespace Leave_Mgt.Controllers.leaves
         {
             try
             {
+                ModelState.Remove("employee");
                 if (ModelState.IsValid)
                 {
                     leaveRepository.UpdateLeave(leave);
